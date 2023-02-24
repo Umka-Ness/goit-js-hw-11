@@ -29,6 +29,7 @@ btnSearch.addEventListener('click', e => {
   const trimmedValue = input.value.trim();
   if (trimmedValue !== '') {
     fetchImages(trimmedValue, pageNumber).then(foundData => {
+      console.log(foundData)
       if (foundData.hits.length === 0) {
         Notiflix.Notify.failure(
           'Sorry, there are no images matching your search query. Please try again.'
